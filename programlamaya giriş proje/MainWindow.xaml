@@ -1,0 +1,143 @@
+﻿<Window x:Class="programlamaya_giriş_proje.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:programlamaya_giriş_proje"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="Programlamaya Giriş Proje" Height="500" Width="485" FontSize="14" Background="#04c582" x:Name="Window">
+    <Grid>
+
+        <Border Background="Black" CornerRadius="20" Margin="20">
+            
+            <TabControl Background="Transparent" Margin="-20,-25,-20,-20">
+
+                <TabItem x:Name="register" Header="Register" Background="Transparent" Height="0" IsEnabled="False">
+                    <Border Background="Transparent" Margin="20">
+                        <StackPanel x:Name="RegisterPage" Margin="20 0" VerticalAlignment="Center">
+                            <TextBlock Text="Register Page" FontWeight="Bold" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+                            <Separator></Separator>
+                            <TextBlock Text="Username" Foreground="White"/>
+                            <TextBox x:Name="register_username" Background="#545d6a" Foreground="White" FontSize="18"/>
+                            <TextBlock Text="Password" Foreground="White"/>
+                            <PasswordBox x:Name="register_passwd" Background="#545d6a" Foreground="White" FontSize="18"/>
+                            <TextBlock Text="Password Again" Foreground="White"/>
+                            <PasswordBox x:Name="register_passwdagain" Background="#545d6a" Foreground="White" FontSize="18"/>
+                            <Button x:Name="btn_register" Click="btn_register_Click" Content="Register" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" IsDefault="True"/>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+
+                <TabItem x:Name="login" Header="Login" Background="Transparent" Height="0" IsEnabled="False">
+                    <Border Background="Transparent" Margin="20">
+                        <StackPanel x:Name="LoginPage" Margin="20" VerticalAlignment="Center">
+                            <TextBlock Text="Login Page" FontWeight="Bold" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+                            <Separator></Separator>
+                            <TextBlock Text="Username" Foreground="White"/>
+                            <TextBox x:Name="login_username" Background="#545d6a" Foreground="White" FontSize="18"/>
+                            <TextBlock Text="Password" Foreground="White"/>
+                            <PasswordBox x:Name="login_passwd" Background="#545d6a" Foreground="White" FontSize="18"/>
+                            <Button x:Name="btn_login" Click="btn_login_Click" Content="Login" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" IsDefault="True"/>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+
+                <TabItem x:Name="calculator" Header="Calculator" Background="Transparent" Height="0" Margin="0,-10,0,100" KeyDown="calculator_KeyDown" IsEnabled="False">
+                    <Border Background="Transparent" Margin="20">
+                        <StackPanel x:Name="Calculator" Margin="20 0" VerticalAlignment="Center">
+                            <TextBlock Text="Calculator" FontWeight="Bold" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+                            <Separator></Separator>
+                            <TextBlock x:Name="LoggedUser" Text="Logged in as: " VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="White" Margin="0 5 0 0"/>
+                            <Grid  Margin="0 10 0 30">
+                                <TextBox TextAlignment="Right" x:Name="calculator_answer" Text="0.00" IsReadOnly="True" Background="#545d6a" Foreground="White" FontSize="18" ToolTip="Answer" Focusable="False"/>
+                                <TextBlock x:Name="calculator_equation" HorizontalAlignment="Left" Width="288" Foreground="#ff9933" FontSize="18" ToolTip="Equation" Focusable="False"/>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="btn_clearlogs" Grid.Column="1" Margin="10,0,0,0" Content="Clear Logs" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" ToolTip="Clears All Logs for User" Focusable="False" Click="Btn_clearlogs_Click"/>
+                            </Grid>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0" Margin="0 0 5 0" >
+                                            <StackPanel.Resources>
+                                                <Style TargetType="{x:Type Button}">
+                                                    <Setter Property="Margin" Value="0,10,2,10"/>
+                                                </Style>
+                                            </StackPanel.Resources>
+                                            <Button x:Name="btn_clear" Content="C" Background="#e00707" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_clear_Click" ToolTip="Clears Everything" Focusable="False"/>
+                                            <Button x:Name="btn_7" Content="7" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="7 Button" Focusable="False"/>
+                                            <Button x:Name="btn_4" Content="4" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="4 Button" Focusable="False"/>
+                                            <Button x:Name="btn_1" Content="1" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="1 Button" Focusable="False"/>
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="1" Margin="5 0 5 0">
+                                            <StackPanel.Resources>
+                                                <Style TargetType="{x:Type Button}">
+                                                    <Setter Property="Margin" Value="0,10,0,10"/>
+                                                </Style>
+                                            </StackPanel.Resources>
+                                            <Button x:Name="btn_delete" Content="DEL" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_delete_Click" ToolTip="Deletes Last Digit of Equation" Focusable="False"/>
+                                            <Button x:Name="btn_8" Content="8" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="8 Button" Focusable="False"/>
+                                            <Button x:Name="btn_5" Content="5" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="5 Button" Focusable="False"/>
+                                            <Button x:Name="btn_2" Content="2" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="2 Button" Focusable="False"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <Button x:Name="btn_0" Content="0" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Margin="0,10,5,10"  Click="btn_number_Click" ToolTip="0 Button" Focusable="False"/>
+                                </StackPanel>                                
+                                <StackPanel Grid.Column="1" Margin="5 0 5 0">
+                                    <StackPanel.Resources>
+                                        <Style TargetType="{x:Type Button}">
+                                            <Setter Property="Margin" Value="0,20,0,0"/>
+                                        </Style>
+                                    </StackPanel.Resources>
+                                    <Grid Margin="0 10 0 0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Grid.Column="0" x:Name="btn_bracket1" Content="(" Margin="0 0 2 0" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" ToolTip="Opens Paranteses"  Click="btn_open_paranteses" Focusable="False"/>
+                                        <Button Grid.Column="1" x:Name="btn_bracket2" Content=")" Margin="2 0 0 0" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" ToolTip="Closes Paranteses" Click="btn_close_paranteses" Focusable="False"/>
+                                    </Grid>
+                                    <Button x:Name="btn_9" Content="9" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="9 Button" Margin="0 20 0 0" Focusable="False"/>
+                                    <Button x:Name="btn_6" Content="6" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="6 Button" Focusable="False"/>
+                                    <Button x:Name="btn_3" Content="3" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand"  Click="btn_number_Click" ToolTip="3 Button" Focusable="False"/>
+                                    <Button x:Name="btn_dot" Grid.Column="1" Content="." Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_number_Click" ToolTip="Puts a Comma to Answer for Decimal Number" Focusable="False"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="2" Margin="5 0 0 0">
+                                    <StackPanel.Resources>
+                                        <Style TargetType="{x:Type Button}">
+                                            <Setter Property="Margin" Value="0,10,0,10"/>
+                                        </Style>
+                                    </StackPanel.Resources>
+                                    <Button x:Name="btn_divide" Content="/" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_operation_Click" ToolTip="Division Operation" Focusable="False"/>
+                                    <Button x:Name="btn_multiply" Content="*" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_operation_Click" ToolTip="Multiplication Operation" Focusable="False"/>
+                                    <Button x:Name="btn_minus" Content="-" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_operation_Click" ToolTip="Substraction Operation" Focusable="False"/>
+                                    <Button x:Name="btn_plus" Content="+" Background="#545d6a" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_operation_Click" ToolTip="Addition Operation" Focusable="False"/>
+                                    <Button x:Name="btn_equal" Grid.Column="2" Content="=" Background="#1c14f9" Foreground="White" FontSize="18" Cursor="Hand" Click="btn_equal_Click" ToolTip="Shows the Answer for Equation and adds it to Logs" IsDefault="True" Focusable="False"/>
+                                </StackPanel>
+                                <ListBox x:Name="Logs" Grid.Column="4" Margin="10 10 0 10" ToolTip="Shows User Logs since the register or last Clear Logs Button usage" Focusable="False" MaxWidth="121" MaxHeight="220" />
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+                
+            </TabControl>
+        </Border>
+        
+        <TextBlock x:Name="Navigate" Text="Not a member? Sign Up!" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10 2" Foreground="DarkViolet" Cursor="Hand" MouseLeftButtonDown="navigate_click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\bin\Debug\programlamaya giriş proje.exe.config
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\bin\Debug\programlamaya giriş proje.exe
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\bin\Debug\programlamaya giriş proje.pdb
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje.csprojAssemblyReference.cache
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\MainWindow.g.cs
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\App.g.cs
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje_MarkupCompile.cache
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje_MarkupCompile.lref
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\MainWindow.baml
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje.g.resources
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya_giriş_proje.Properties.Resources.resources
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje.csproj.GenerateResource.cache
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje.csproj.CoreCompileInputs.cache
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje.exe
+D:\Karışık\ders\programlamaya giriş proje\programlamaya giriş proje\obj\Debug\programlamaya giriş proje.pdb
